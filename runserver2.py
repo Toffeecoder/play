@@ -13,7 +13,7 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
 
     def on_message(self, message):
         print message
-        self.write_message(u"8080: Your message was: " + message)
+        self.write_message(u"8081: Your message was: " + message)
 
     def on_close(self):
         pass
@@ -40,5 +40,5 @@ class Application(tornado.web.Application):
 if __name__ == '__main__':
     ws_app = Application()
     server = tornado.httpserver.HTTPServer(ws_app)
-    server.listen(8080)
+    server.listen(8081)
     tornado.ioloop.IOLoop.instance().start()
