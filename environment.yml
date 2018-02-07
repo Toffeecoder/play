@@ -1,3 +1,6 @@
 name: play-env
 dependencies:
 - python=2
+- pip
+- pip:
+    - tornado
